@@ -1,0 +1,17 @@
+site_name: XAI Toolkit
+site_url: https://XAI-toolkit.github.io/
+plugins:
+  - search:
+  - multirepo:
+
+nav:
+  - Home: 'index.md'
+  - Toolkits:
+    - CRISSPAC: '!import https://github.com/XAI-toolkit/CRISSPAC?branch=main'
+    - TD Benchmarker: '!import https://github.com/XAI-toolkit/TDBenchmarker?branch=master'
+    - Forecasting Toolbox: '!import https://github.com/XAI-toolkit/forecaster-toolbox?branch=master'
+    - TD Classifier: '!import https://github.com/XAI-toolkit/td-classifier?branch=master'
+    - SHAP-Boruta: '!import https://github.com/XAI-toolkit/SHAP-Boruta?branch=main'
+
+theme: mkdocs
+copyright: Copyright &copy; 2023 XAI-toolkit
