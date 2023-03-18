@@ -7,10 +7,10 @@ plugins:
 nav:
   - Home: 'index.md'
   - Toolkits:
-    - CRISSPAC: '!import https://github.com/XAI-toolkit/CRISSPAC?branch=main'
-    - TD Benchmarker: '!import https://github.com/XAI-toolkit/TDBenchmarker?branch=master'
+    - Predictive Models Toolbox: '!import https://github.com/XAI-toolkit/CRISSPAC?branch=main'
+    - Archetypal Analysis Toolbox: '!import https://github.com/XAI-toolkit/TDBenchmarker?branch=master'
     - Forecasting Toolbox: '!import https://github.com/XAI-toolkit/forecaster-toolbox?branch=master'
-    - TD Classifier: '!import https://github.com/XAI-toolkit/td-classifier?branch=master'
+    - Binary Classification Toolbox: '!import https://github.com/XAI-toolkit/td-classifier?branch=master'
     - SHAP-Boruta: '!import https://github.com/XAI-toolkit/SHAP-Boruta?branch=main'
 
 theme: mkdocs
