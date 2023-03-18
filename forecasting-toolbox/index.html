@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://XAI-toolkit.github.io/forecasting-toolbox/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Forecasting Toolbox - XAI Toolkit</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">XAI Toolkit</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Toolkits <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CRISSPAC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../crisspac/" class="dropdown-item">CRISSPAC</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">TD Benchmarker</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../td-benchmarker/" class="dropdown-item">TD Benchmarker</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Forecasting Toolbox</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Forecasting Toolbox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">TD Classifier</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../td-classifier/" class="dropdown-item">TD Classifier</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">SHAP-Boruta</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../shap-boruta/" class="dropdown-item">SHAP-Boruta</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../td-benchmarker/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../td-classifier/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/XAI-toolkit/forecaster-toolboxdocs/*docs/index.md" class="nav-link">Edit on </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#forecasting-toolbox" class="nav-link">Forecasting Toolbox</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#description" class="nav-link">Description</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#run-server" class="nav-link">Run Server</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#run-tests" class="nav-link">Run Tests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="forecasting-toolbox">Forecasting Toolbox</h1>
+<h2 id="description">Description</h2>
+<p>This repository contains the source code of the <strong>Forecasting Toolbox back-end</strong>, which is part of the <a href="https://sdk4ed.eu/">SDK4ED Platform</a>. The purpose of the Forecasting Toolbox is to provide predictive forecasts regarding the evolution of the three core quality attributes targeted by the SDK4ED platform, namely <em>Technical Debt</em>, <em>Energy</em> and <em>Dependability (Security)</em>. The entry point of the Forecasting Toolbox is a RESTful web server that uses the <a href="https://www.palletsprojects.com/p/flask/">Flask web framework</a> wrapped inside <a href="https://docs.pylonsproject.org/projects/waitress/en/stable/">Waitress</a>, a Python WSGI production-ready server. At a lower level, the server exposes three sub-modules, implemented as individual web services. Each web service plays the role of an end-point that allows the invocation of a set of forecasting models and returns the results, providing users with insightful information for the future evolution each of the three core quality attributes of a software application. The services supported by the Forecasting Toolbox are listed below:
+- <strong>TD Forecaster</strong>: This web service is responsible for generating Technical Debt forecasts for a given software application. A TD forecast represents the predicted evolution of the total remediation effort (measured in minutes) to fix all code issues (e.g. code smells, bugs, code duplications, etc.) of a software application, up to a future point specified by the user.
+- <strong>Energy Forecaster</strong>: This web service is responsible for generating Energy forecasts for a given software application. An Energy forecast represents the predicted evolution of the total energy consumption (measured in Joules) of a software application, up to a future point specified by the user.
+- <strong>Dependability Forecaster</strong>: This web service is responsible for generating Security forecasts for a given software application. A Security forecast represents the predicted evolution of the Security Index (value between 0 and 1 that aggregates the entire program security characteristics) of a software application, up to a future point specified by the user.</p>
+<p>The three web services allow the individual and remote invocation of the forecasting models developed for estimating the evolution of TD, Energy and Security. This is achieved through the dedicated API exposed by the RESTful web server, which allows the user to perform simple HTTP GET requests to the three web services. Several inputs need to be provided as URL-encoded parameters to these requests. These parameters are listed below:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center">Description</th>
+<th align="center">Required</th>
+<th align="center">Valid Inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">horizon</td>
+<td align="center">The forecasting horizon up to which forecasts will be produced.</td>
+<td align="center">Yes</td>
+<td align="center">An integer in range [1-N], where N depends on the volume of data used to train the regressor. Currently there is no upper limit and the service returns an error if this value is set too high.</td>
+</tr>
+<tr>
+<td align="center">project</td>
+<td align="center">The project ID for which the forecasts will be produced.</td>
+<td align="center">Yes</td>
+<td align="center">A string value representing the ID of the selected project for which a forecast was requested. This ID is used to retrieve the TD, Energy and Dependability analysis metrics from the corresponding Toolboxes’ DBs, which will then be used for forecasting model execution. Depending on the specific web service, this ID is constructed as follows:<br>· TD Forecaster: ‘<user_name>:<project_name>’<br>· Security Forecaster: ‘<user_name>:<project_name>’<br>· Energy Forecaster: ‘<project_name>’<br>Both <user_name> and <project_name> values are project properties retrieved from the SDK4ED Dashboard session storage.</td>
+</tr>
+<tr>
+<td align="center">regressor</td>
+<td align="center">The regressor model that will be used to produce forecasts.</td>
+<td align="center">No</td>
+<td align="center">One of the following string values: [‘auto’, ‘mlr’, ‘lasso’, ‘ridge’, ‘svr_linear’, ‘svr_rbf’, ‘random_forest’, ‘arima’].<br>Default value is ‘auto’. If this parameter is omitted, default value is set to ‘auto’ and the service selects automatically the best model based on validation error minimization.</td>
+</tr>
+<tr>
+<td align="center">ground_truth</td>
+<td align="center">If the model will return also ground truth values or not.</td>
+<td align="center">No</td>
+<td align="center">One of the following string values: [‘yes’, ‘no’].<br>Default value is ‘no.</td>
+</tr>
+<tr>
+<td align="center">test</td>
+<td align="center">If the model will produce Train-Test or unseen forecasts.</td>
+<td align="center">No</td>
+<td align="center">One of the following string values: [‘yes’, ‘no’].<br>Default value is ‘no’. If set to ‘no’, then the service uses the whole data to train a regressor and returns forecasts on unseen data. A value of ‘yes’ should be used only for model testing and not actual deployment into production.</td>
+</tr>
+</tbody>
+</table>
+<p>The output of the three individual web services provided by the Forecasting Toolbox, namely TD Forecaster, Energy Forecaster and Dependability Forecaster is a JSON file containing the predicted values for a particular quality attribute of the selected application. This JSON actually contains i) a status code of the response, ii) a N-size array containing the forecasts, where N is equal to the ‘horizon’ parameter, iii) a recap on the given parameter values, and iv) a message informing the user if the request was fulfilled successfully or not.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="installation-using-anaconda">Installation using Anaconda</h3>
+<p>In this section, we provide instructions on how the user can build the python Flask server of the Forecasting Toolbox from scratch, using the Anaconda virtual environment. The Forecasting Toolbox is developed to run on Unix and Windows systems with python 3.6.* innstalled. We suggest installing python via the Anaconda distribution as it provides an easy way to create a virtual environment and install dependencies. The configuration steps needed, are described below:</p>
+<ul>
+<li><strong>Step 1</strong>: Download the latest <a href="https://www.anaconda.com/distribution/">Anaconda distribution</a> and follow the installation steps described in the <a href="https://docs.anaconda.com/anaconda/install/windows/">Anaconda documentation</a>.</li>
+<li><strong>Step 2</strong>: Open Anaconda cmd. Running Anaconda cmd activates the base environment. We need to create a specific environment to run Forecasting Toolbox. Create a new python 3.6.4 environment by running the following command:</li>
+</ul>
+<pre><code class="language-bash">conda create --name forecaster_toolbox python=3.6.4
+</code></pre>
+<p>This command will result in the creation of a conda environment named <em>forecaster_toolbox</em>. In order to activate the new environment, execute the following command:</p>
+<pre><code class="language-bash">conda activate forecaster_toolbox
+</code></pre>
+<ul>
+<li><strong>Step 3</strong>: Once your newly created environment is active, install the needed libraries by executing the following commands:</li>
+</ul>
+<pre><code class="language-bash">conda install -c anaconda numpy pandas scikit-learn waitress flask flask-cors pymongo
+</code></pre>
+<p>and</p>
+<pre><code class="language-bash">conda install -c saravji pmdarima
+</code></pre>
+<ul>
+<li><strong>Step 4</strong>: To start the server, use the command promt inside the active environment and execute the commands described in section <a href="/sdk4ed/forecaster-toolbox#run-built-in-server">Run Server</a>.</li>
+</ul>
+<h3 id="installation-using-docker">Installation using Docker</h3>
+<p>In this section, we provide instructions on how the user can build a new Docker Image that contains the python Flask app and the Conda environment of the of the Forecasting Toolbox. We highly recommend the users to select this way of installing the SDK4ED Forecasting Toolbox, as it constitutes the easiest way.</p>
+<ul>
+<li><strong>Step 1</strong>: Download and install <a href="https://www.docker.com/">Docker</a></li>
+<li><strong>Step 2</strong>: Clone the latest Forecasting Toolbox version and navigate to the home directory. You should see a <a href="/blob/master/Dockerfile">DockerFile</a> and a <a href="./blob/master/environment.yml">environment.yml</a> file, which contains the Conda environment dependencies. </li>
+<li><strong>Step 3</strong>: In the home directory of the Forecasting Toolbox, open cmd and execute the following command:</li>
+</ul>
+<pre><code class="language-bash">sudo docker build -t forecaster_toolbox .
+</code></pre>
+<p>This command will result in the creation of a Docker Image named <em>forecaster_toolbox</em>. In order to create a Docker Container from this image, execute the following command:</p>
+<pre><code class="language-bash">sudo docker run -it --name forecaster-toolbox-test -p 5000:5000 forecaster_toolbox
+</code></pre>
+<p>This command will generate and run a Docker Container named <em>forecaster-toolbox-test</em> in interactive session mode, i.e. it will open a command promt inside the Container. 
+- <strong>Step 4</strong>: To start the server, use the command promt inside the running Container and execute the commands described in section <a href="/sdk4ed/forecaster-toolbox#run-built-in-server">Run Server</a>.</p>
+<h3 id="installation-of-the-database">Installation of the Database</h3>
+<p>Since the TD, Energy and Dependability forecasts are produced "on the fly", the Forecasting Toolbox does not require a running database instance to be functional. However, in case you require access to previously produced forecasting results, a database dedicated to store the output of the Forecasting web services might be of help. In that case, MongoDB is a well-suited option for the purposes of the Forecasting Toolbox.</p>
+<p>To quickly install a MongoDB using Docker, open cmd and execute the following command:</p>
+<pre><code class="language-bash">sudo docker run --detach  \
+  -p 27017:27017  \
+  --name mongodb  \
+  --volume /home/&lt;user_name&gt;/Desktop/mongo_data:/data/db  \
+  mongo
+</code></pre>
+<p>This command will generate and run a MongoDB Docker Container named <em>mongodb</em>, which will serve as the Forecasting Toolbox dedicated DB.</p>
+<h2 id="run-server">Run Server</h2>
+<p>You can run the server in various modes using Python to run the <code>forecaster_service.py</code> script:</p>
+<pre><code>usage: forecaster_service.py [-h] [-dh DB_HOST] [-dp DB_PORT] [-dn DB_DBNAME]
+                             [--debug]
+                             HOST PORT SERVER_MODE
+
+positional arguments:
+  HOST           Server HOST (e.g. &quot;localhost&quot;)
+  PORT           Server PORT (e.g. &quot;5000&quot;)
+  SERVER_MODE    builtin, waitress
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -dh DB_HOST    MongoDB HOST (e.g. &quot;localhost&quot;) (default: localhost)
+  -dp DB_PORT    MongoDB PORT (e.g. &quot;27017&quot;) (default: 27017)
+  -dn DB_DBNAME  Database NAME (default: forecaster_service)
+  --debug        Run builtin server in debug mode (default: False)
+</code></pre>
+<p><code>HOST</code>, <code>PORT</code>, and <code>SERVER_MODE</code> arguments are <strong>mandatory</strong>. You can set them according to your needs.</p>
+<p><code>DB_HOST</code>, <code>DB_PORT</code>, and <code>DB_DBNAME</code> arguments are <strong>optional</strong> and assume that there is a MongoDB instance running either on a local machine or remotely. In case that there is no such MongoDB instance running, the Forecasting Toolbox will still return the results, but they will not be stored anywhere.</p>
+<h3 id="run-built-in-flask-server">Run built-in Flask server</h3>
+<pre><code>         127.0.0.1:5000
+Client &lt;----------------&gt; Flask
+</code></pre>
+<p>To start the Forecasting Toolbox using the built-in <strong>Flask</strong> server, use the command promt inside the active Conda or Container environment and execute the following command: </p>
+<pre><code class="language-bash">python forecaster_service.py 0.0.0.0 5000 builtin --debug
+</code></pre>
+<p>This command will start the built-in Flask server locally (0.0.0.0) on port 5000.</p>
+<p><strong>MongoDB Integration</strong></p>
+<p>In case there is a MongoDB instance running, use the command promt inside the active conda or Container environment and execute the following command: </p>
+<pre><code class="language-bash">python forecaster_service.py 0.0.0.0 5000 builtin -dh localhost -dp 27017 -dn forecaster_service --debug
+</code></pre>
+<p>This command will start the built-in Flask server locally on port 5000 and store the results on a MongoDB database named "forecaster_service" running locally on port 27017.</p>
+<p><strong>Warning</strong>: The built-in Flask mode is useful for development since it has debugging enabled (e.g. in case of error the client gets a full stack trace). However, it is single-threaded. Do NOT use this mode in production!</p>
+<h3 id="run-waitress-server">Run Waitress server</h3>
+<pre><code>         127.0.0.1:5000
+Client &lt;----------------&gt; Waitress &lt;---&gt; Flask
+</code></pre>
+<p>To start the Forecasting Toolbox using the <strong>Waitress</strong> server, use the command promt inside the active Conda or Container environment and execute the following command:</p>
+<pre><code class="language-bash">python forecaster_service.py 0.0.0.0 5000 waitress
+</code></pre>
+<p>This command will start the Waitress server locally (0.0.0.0) on port 5000.</p>
+<p><strong>MongoDB Integration</strong></p>
+<p>In case there is a MongoDB instance running, use the command promt inside the active conda or Container environment and execute the following command: </p>
+<pre><code class="language-bash">python forecaster_service.py 0.0.0.0 5000 waitress -dh localhost -dp 27017 -dn forecaster_service
+</code></pre>
+<p>This command will start the Waitress server locally on port 5000 and store the results on a MongoDB database named "forecaster_service" running locally on port 27017.</p>
+<p><strong>Warning</strong>: The Waitress mode is higly recommended in real production environments, since it supports scaling and multiple-request handling features.</p>
+<h2 id="run-tests">Run Tests</h2>
+<p>A series of dedicated tests have been developed using the <a href="https://docs.pytest.org/en/latest/">pytest</a> framework in order to ensure the proper execution of the Forecasting Toolbox. Once the server is installed, the user can run the testing suite by opening a new command promt inside the active Conda or Container environment and executing the following command:</p>
+<pre><code class="language-bash">pytest -v
+</code></pre>
+<p>A list of results will start popping on the command prompt, informing the user whether a test has PASSED or FAILED.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="example">Example</h3>
+<p>Once the server is running, open your web browser and navigate to the following URL:</p>
+<p>http://127.0.0.1:5000/ForecasterToolbox/TDForecasting?horizon=5&amp;project=apache_kafka&amp;regressor=ridge&amp;ground_truth=no&amp;test=no</p>
+<p>You will get a JSON response containing TD forecasts of a sample application (Apache Kafka) for an horizon of 5 versions ahead, using the Ridge regressor model.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2023 XAI-toolkit</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
